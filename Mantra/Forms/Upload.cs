@@ -35,11 +35,6 @@ namespace Mantra
             addUserControl(uC_);
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void guna2Button3_Click(object sender, EventArgs e)
         {
             sendweb uC_ = new sendweb();
