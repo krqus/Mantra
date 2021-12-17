@@ -40,5 +40,11 @@ namespace Mantra
             sendweb uC_ = new sendweb();
             addUserControl(uC_);
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            chatting uC_ = new chatting();
+            addUserControl(uC_);
+        }
     }
 }

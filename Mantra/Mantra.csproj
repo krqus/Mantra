@@ -54,6 +54,9 @@
     <Reference Include="Discord.Net.WebSocket, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Discord.Net.WebSocket.2.4.0\lib\net461\Discord.Net.WebSocket.dll</HintPath>
     </Reference>
+    <Reference Include="DiscordMessenger, Version=2.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DiscordMessenger.2.0.2\lib\netstandard2.0\DiscordMessenger.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.2.5, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.5\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
@@ -65,8 +68,8 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="RestSharp, Version=106.15.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
       <HintPath>..\packages\RestSharp.106.15.0\lib\net452\RestSharp.dll</HintPath>
@@ -225,6 +228,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\chatting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\chatting.Designer.cs">
+      <DependentUpon>chatting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control\delweb.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -237,31 +246,25 @@
     <Compile Include="Control\sendweb.Designer.cs">
       <DependentUpon>sendweb.cs</DependentUpon>
     </Compile>
-    <Compile Include="Control\userinfo.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Control\userinfo.Designer.cs">
-      <DependentUpon>userinfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Upload.cs">
+    <Compile Include="Forms\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Upload.Designer.cs">
-      <DependentUpon>Upload.cs</DependentUpon>
+    <Compile Include="Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Control\chatting.resx">
+      <DependentUpon>chatting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\delweb.resx">
       <DependentUpon>delweb.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control\sendweb.resx">
       <DependentUpon>sendweb.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Control\userinfo.resx">
-      <DependentUpon>userinfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Upload.resx">
-      <DependentUpon>Upload.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

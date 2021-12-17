@@ -33,7 +33,8 @@ namespace Mantra.Control
                     file = openDialog.FileName;
                 }
 
-                guna2TextBox1.Text = file;
+            guna2PictureBox1.ImageLocation = openDialog.FileName;
+            guna2TextBox1.Text = file;
 
         }
 
