@@ -1,6 +1,9 @@
 # Mantra
 [![Github All Releases](https://img.shields.io/github/downloads/AntisocialProgramming/Mantra/total.svg)]()
 
+[![Download](https://img.shields.io/badge/Download-Release-green)
+(https://github.com/AntisocialProgramming/Mantra/releases)]()
+
 **This will allow you to delete unsafe webhooks that grabbers/phishers use for your info.**
 
 ----------------------------------------------------------------------------------------------
