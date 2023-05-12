@@ -6,6 +6,9 @@ namespace Mantra
 {
     public partial class Upload : Form
     {
+        delweb deletewebhook = new delweb();
+        sendweb sendwebhook = new sendweb();
+        chatting chatwebhook = new chatting();
 
         public Upload()
         {
@@ -14,14 +17,14 @@ namespace Mantra
 
         private void addUserControl(UserControl uc)
         {
-            guna2Panel1.Controls.Clear();
+            guna2Panel1.Controls.Remove(uc);
             uc.BringToFront();
             guna2Panel1.Controls.Add(uc);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-        
+            
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
@@ -31,20 +34,20 @@ namespace Mantra
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            delweb uC_ = new delweb();
-            addUserControl(uC_);
+            
+            addUserControl(deletewebhook);
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            sendweb uC_ = new sendweb();
-            addUserControl(uC_);
+            
+            addUserControl(sendwebhook);
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            chatting uC_ = new chatting();
-            addUserControl(uC_);
+            
+            addUserControl(chatwebhook);
         }
     }
 }
