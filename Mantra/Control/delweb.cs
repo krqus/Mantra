@@ -18,15 +18,17 @@ namespace Mantra
             InitializeComponent();
         }
 
-        
+        // Attempts to delete the specified webhook.
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            // Asks for confirmation.
             string message = "This Will DELETE the specified webhook\n\nAre you sure about this?";
             string title = "Confirm Choice";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result = MessageBox.Show(message, title, buttons);
             if (result == DialogResult.Yes)
             {
+                // Attempts to delete.
                 try
                 {
                     var request = WebRequest.Create(guna2TextBox1.Text);
@@ -43,8 +45,6 @@ namespace Mantra
                     label1.ForeColor = Color.LightGreen;
                     label1.Visible = false;
                     MessageBox.Show(ex.Message);
-
-
                 }
 
             }
